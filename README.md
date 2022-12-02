@@ -1,1 +1,3 @@
-"Advent of Code Repository" 
+Advent of Code Repository
+
+Written in Powershell
