@@ -25,9 +25,12 @@ foreach ($elf in $ElfArray) {
     
 }
 $top3 = $ElfHash.getEnumerator() | sort value | select -last 3
+$output += "Part 1:`n"
+$output += "$($top3[2].Name) has the most calories with $($top3[2].Value) Calories`n"
+$output += "Part 2:`n"
 $total = 0
 foreach ($elf in $top3) {
-    $Output += "Elf $($elf.name) has $($elf.Value) Calories`n"
+    $Output += "$($elf.name) has $($elf.Value) Calories`n"
     $total += $elf.value
 }
 $output += "The top three elves have $total Calories"
